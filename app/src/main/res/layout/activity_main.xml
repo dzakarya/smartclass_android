@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ellipse"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/el1"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone"
+        android:layout_below="@+id/el1"
+        android:layout_marginTop="18dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ph1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_things_to_do"
+        android:layout_below="@+id/ph1"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txt1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/explanation"
+        android:layout_below="@+id/txt1"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/secondaryTextColor"
+        android:id="@+id/txt2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primaryColor"
+        android:layout_below="@+id/txt2"
+        android:layout_centerHorizontal="true"
+        android:text="Login"
+        android:textColor="@color/primaryTextColor"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_to_login"/>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">smartclass</string>
+    <string name="get_things_to_do">SmartClass IoT System</string>
+    <string name="login">login</string>
+    <string name="explanation">Smart Class is an app that integrate your electronic device with your smartphone. You can easily control your e-device from this app and monitor all the data that has has been recorded</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="enter_your_id">Enter Your ID</string>
+    <string name="enter_your_password">Enter Your Password</string>
+
+</resources>
