@@ -40,9 +40,7 @@
             android:background="@drawable/btn_shape"
             android:text="Light Control"
             android:textColor="@color/primaryTextColor"
-
-
-
+            android:id="@+id/light_button"
             />
         <Button
             android:layout_width="wrap_content"
@@ -51,6 +49,7 @@
             android:text="Temp Control"
             android:textColor="@color/primaryTextColor"
             android:layout_marginTop="10dp"
+            android:id="@+id/temp_button"
             />
         <Button
             android:layout_width="wrap_content"
@@ -59,6 +58,7 @@
             android:text="Data Log"
             android:textColor="@color/primaryTextColor"
             android:layout_marginTop="10dp"
+            android:id="@+id/datalog_button"
             />
 
     </LinearLayout>
