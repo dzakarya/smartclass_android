@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 
 class control_room : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_control_room)
@@ -16,6 +17,7 @@ class control_room : AppCompatActivity() {
         val light_intent = Intent(this,light_control_page::class.java)
         val temp_intent = Intent(this, temp_control_page::class.java)
         val datalog_intent = Intent(this, data_log::class.java)
+
 
         light_button.setOnClickListener {
             startActivity(light_intent)

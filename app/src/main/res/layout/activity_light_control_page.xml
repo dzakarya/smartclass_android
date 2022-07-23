@@ -80,6 +80,7 @@
         android:layout_marginTop="30dp"
         android:text="Set"
         android:textColor="@color/primaryTextColor"
+        android:id="@+id/btn_set_light"
         />
 
 </RelativeLayout>

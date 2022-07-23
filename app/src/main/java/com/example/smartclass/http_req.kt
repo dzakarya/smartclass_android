@@ -16,17 +16,18 @@ class http_req {
             field = value
         }
 
-    fun http_get(param : String?){
+    fun http_get(param : String?): String?{
         val connection = URL(initUrl+param).openConnection()
+        var line: String?
         BufferedReader(InputStreamReader(connection.getInputStream())).use { inp ->
-            var line: String?
             while (inp.readLine().also { line = it } != null){
                 println(line)
             }
         }
+        return line
     }
 
-    fun http_post(data: String?, end_point: String?){
+    fun http_post(data: String?, end_point: String?): String?{
         var url = URL(initUrl+end_point)
         var postData = "foo1=bar1&foo2=bar2"
 
@@ -35,13 +36,14 @@ class http_req {
         conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded")
         conn.setRequestProperty("Content-Length", postData.length.toString())
 
+        var line: String?
         DataOutputStream(conn.getOutputStream()).use { it.writeBytes(postData) }
         BufferedReader(InputStreamReader(conn.getInputStream())).use { bf ->
-            var line: String?
             while (bf.readLine().also { line = it } != null) {
                 println(line)
             }
         }
+        return line
     }
 
 
