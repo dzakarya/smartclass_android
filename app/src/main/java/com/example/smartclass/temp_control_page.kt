@@ -11,10 +11,17 @@ class temp_control_page : AppCompatActivity() {
 
         val btn_set_value = findViewById<Button>(R.id.btn_set_temp)
         val HttpReq = http_req()
-        val endPoint = "/set-temp"
-        var data = "value=50"
+        val endPointget = "temp/get-temp"
+        val endPointset = "temp/set-temp"
+        var value = 20
+        var data = """
+            {
+            "value":"$value"
+            }
+        """.trimIndent()
+        var res =  HttpReq.http_get(endPointget)
         btn_set_value.setOnClickListener {
-            HttpReq.http_post(data,endPoint)
+            HttpReq.http_post(data,endPointset)
         }
     }
 }

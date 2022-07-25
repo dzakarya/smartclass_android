@@ -1,5 +1,9 @@
 package com.example.smartclass
 
+import android.widget.Toast
+import com.github.kittinunf.fuel.core.FuelManager
+import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
 import java.io.BufferedReader
 import java.io.DataOutputStream
 import java.io.InputStreamReader
@@ -16,34 +20,32 @@ class http_req {
             field = value
         }
 
-    fun http_get(param : String?): String?{
-        val connection = URL(initUrl+param).openConnection()
-        var line: String?
-        BufferedReader(InputStreamReader(connection.getInputStream())).use { inp ->
-            while (inp.readLine().also { line = it } != null){
-                println(line)
-            }
-        }
-        return line
+    init {
+        FuelManager.instance.basePath = initUrl
     }
 
-    fun http_post(data: String?, end_point: String?): String?{
-        var url = URL(initUrl+end_point)
-        var postData = "foo1=bar1&foo2=bar2"
-
-        val conn = url.openConnection()
-        conn.doOutput = true
-        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded")
-        conn.setRequestProperty("Content-Length", postData.length.toString())
-
-        var line: String?
-        DataOutputStream(conn.getOutputStream()).use { it.writeBytes(postData) }
-        BufferedReader(InputStreamReader(conn.getInputStream())).use { bf ->
-            while (bf.readLine().also { line = it } != null) {
-                println(line)
+    fun http_get(end_point: String ): String?{
+        var res : String=""
+        end_point.httpGet()
+            .responseString { request, response, result ->
+                println(request.toString())
+                println(result.toString())
+                res = result.toString()
             }
+        return res
+    }
+
+    fun http_post(data: String, end_point: String): String?{
+       var res : String = ""
+        end_point.httpPost().
+        header("Content-Type", "application/json").
+        body(data).
+        responseString { request, response, result ->
+            println(request.toString())
+            println(result.toString())
+            res = result.toString()
         }
-        return line
+        return res
     }
 
 
