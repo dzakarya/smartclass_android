@@ -28,8 +28,6 @@ class http_req {
         var res : String=""
         end_point.httpGet()
             .responseString { request, response, result ->
-                println(request.toString())
-                println(result.toString())
                 res = result.toString()
             }
         return res
@@ -41,8 +39,6 @@ class http_req {
         header("Content-Type", "application/json").
         body(data).
         responseString { request, response, result ->
-            println(request.toString())
-            println(result.toString())
             res = result.toString()
         }
         return res
