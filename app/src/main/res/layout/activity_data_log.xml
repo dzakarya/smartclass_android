@@ -26,14 +26,16 @@
         android:id="@+id/txt1"
         />
 
-    <EditText
+    <TextView
+        android:id="@+id/in_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/in_date"
+        android:layout_alignBottom="@+id/btn_date"
         android:layout_marginTop="20dp"
-        android:textColor="@color/primaryTextColor"
         android:layout_toRightOf="@+id/btn_date"
-        android:layout_alignBottom="@+id/btn_date"/>
+        android:textColor="@color/primaryTextColor"
+        android:textSize="30sp"
+        android:layout_marginLeft="30dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -43,13 +45,15 @@
         android:id="@+id/btn_date"
         android:layout_below="@+id/txt1"/>
 
-    <EditText
+    <TextView
+        android:id="@+id/in_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/in_time"
-        android:layout_below="@+id/in_date"
+        android:layout_alignBottom="@+id/btn_time"
+        android:layout_toRightOf="@+id/btn_time"
         android:textColor="@color/primaryTextColor"
-        android:layout_toRightOf="@+id/btn_time"/>
+        android:textSize="30sp"
+        android:layout_marginLeft="30dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -77,8 +81,9 @@
                 android:text="Temp :"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="20sp"
-                android:id="@+id/temp_txt"/>
-            <EditText
+                android:id="@+id/temp_txt"
+                android:layout_marginTop="20dp"/>
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/temp_txt"
@@ -92,9 +97,10 @@
                 android:textColor="@color/primaryTextColor"
                 android:textSize="20sp"
                 android:id="@+id/light_txt"
-                android:layout_below="@+id/et_temp"/>
+                android:layout_below="@+id/et_temp"
+                android:layout_marginTop="20dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/light_txt"
@@ -104,13 +110,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="smoke :"
+                android:text="Smoke :"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="20sp"
                 android:id="@+id/smoke_txt"
-                android:layout_below="@+id/et_lh"/>
+                android:layout_below="@+id/et_lh"
+                android:layout_marginTop="20dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/smoke_txt"
@@ -124,14 +131,26 @@
                 android:textColor="@color/primaryTextColor"
                 android:textSize="20sp"
                 android:id="@+id/people_txt"
-                android:layout_below="@+id/et_smoke"/>
+                android:layout_below="@+id/et_smoke"
+                android:layout_marginTop="20dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/people_txt"
                 android:layout_alignTop="@id/people_txt"
                 android:id="@+id/et_people"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/people_txt"
+                android:layout_centerHorizontal="true"
+                android:text="@string/search_data"
+                android:textColor="@color/primaryTextColor"
+                android:id="@+id/btn_search_data"
+                android:layout_marginTop="20dp"
+                />
 
         </RelativeLayout>
     </LinearLayout>
