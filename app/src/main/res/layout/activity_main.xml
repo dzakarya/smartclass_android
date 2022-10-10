@@ -16,11 +16,10 @@
         />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/phone"
-        android:layout_below="@+id/el1"
-        android:layout_marginTop="18dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo_poltekpel"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/ph1"/>
 

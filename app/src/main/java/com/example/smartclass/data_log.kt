@@ -27,17 +27,34 @@ class data_log : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data_log)
+
         tv_in_date = findViewById(R.id.in_date)
         tv_in_time = findViewById(R.id.in_time)
+
         val btn_date = findViewById<Button>(R.id.btn_date)
         val btn_time = findViewById<Button>(R.id.btn_time)
         val btn_search_data = findViewById<Button>(R.id.btn_search_data)
+
         val HttpReq = http_req()
+
+        getDateTimeCalendar()
+
         btn_date.setOnClickListener {
             DatePickerDialog(this,this,year,month,day).show()
         }
+
         btn_time.setOnClickListener {
             TimePickerDialog(this,this,hour,minute,true).show()
+        }
+
+        btn_search_data.setOnClickListener{
+            var payload = """
+            {
+            "date":"$savedDay-$savedMonth-$savedYear",
+            "time":"$savedHour:$savedMinute"
+            }
+        """.trimIndent()
+            var res = HttpReq.http_post(payload,"/data/get-data")
         }
     }
 

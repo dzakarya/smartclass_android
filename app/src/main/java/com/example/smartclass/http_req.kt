@@ -5,7 +5,7 @@ import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.fuel.httpPost
 
 class http_req {
-    var initUrl: String = "http://192.168.100.79:8080"
+    var initUrl: String = "http://192.168.0.102:8080"
 
         // getter
         get() = field
@@ -24,6 +24,7 @@ class http_req {
         end_point.httpGet()
             .responseString { request, response, result ->
                 res = result.toString()
+                println(request.toString())
             }
         return res
     }
@@ -35,6 +36,7 @@ class http_req {
         body(data).
         responseString { request, response, result ->
             res = result.toString()
+            println(request.toString())
         }
         return res
     }

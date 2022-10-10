@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" Light Control Page"
-        android:layout_below="@+id/el1"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/poppinsbold"
         android:textColor="@color/primaryTextColor"
@@ -38,16 +38,92 @@
         android:textColor="@color/primaryTextColor"
         android:id="@+id/txt2"
         />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/rg1"
+        android:layout_below="@+id/txt2">
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off"
+            android:id="@+id/offzone1"
+            android:checked="true"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low"
+            android:layout_marginStart="30dp"
+            android:id="@+id/lowzone1"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mid"
+            android:layout_marginStart="30dp"
+            android:id="@+id/midzone1"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bright"
+            android:layout_marginStart="30dp"
+            android:id="@+id/brightzone1"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On"
+            android:layout_marginStart="30dp"
+            android:id="@+id/onzone1"/>
+    </RadioGroup>
 
     <com.google.android.material.slider.Slider
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:trackColor="@color/primaryColor"
         android:layout_below="@+id/txt2"
-        android:valueFrom="16"
-        android:valueTo="30"
+        android:valueFrom="0"
+        android:valueTo="100"
+        android:stepSize="1"
         android:id="@+id/lh_slider1"
+        android:visibility="invisible"
         />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/rg2"
+        android:layout_below="@+id/txt3">
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off"
+            android:id="@+id/offzone2"
+            android:checked="true"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low"
+            android:layout_marginStart="30dp"
+            android:id="@+id/lowzone2"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mid"
+            android:layout_marginStart="30dp"
+            android:id="@+id/midzone2"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bright"
+            android:layout_marginStart="30dp"
+            android:id="@+id/brightzone2"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On"
+            android:layout_marginStart="30dp"
+            android:id="@+id/onzone2"/>
+    </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
@@ -66,21 +142,61 @@
         android:layout_height="wrap_content"
         app:trackColor="@color/primaryColor"
         android:layout_below="@+id/txt3"
-        android:valueFrom="16"
-        android:valueTo="30"
+        android:valueFrom="0"
+        android:valueTo="100"
+        android:stepSize="1"
         android:id="@+id/lh_slider2"
+        android:visibility="invisible"
+        />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primaryTextColor"
+        android:outlineSpotShadowColor="@color/primaryColor"
+        android:text="Automatic Mode"
+        android:layout_below="@+id/lh_slider2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:id="@+id/swautomation"
         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_shape"
-        android:layout_below="@+id/lh_slider2"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/swautomation"
+        android:layout_alignParentStart="true"
         android:layout_marginTop="30dp"
         android:text="Set"
         android:textColor="@color/primaryTextColor"
         android:id="@+id/btn_set_light"
+        android:layout_marginStart="50dp"
         />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:src="@drawable/microphone"
+        android:layout_below="@+id/swautomation"
+        android:layout_marginTop="10dp"
+        android:id="@+id/iv_mic"
+        android:contentDescription="Mic"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voice Mode"
+        android:layout_below="@+id/iv_mic"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/primaryTextColor"
+        />
+
+
+
 
 </RelativeLayout>
