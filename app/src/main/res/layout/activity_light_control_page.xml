@@ -38,43 +38,43 @@
         android:textColor="@color/primaryTextColor"
         android:id="@+id/txt2"
         />
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/rg1"
-        android:layout_below="@+id/txt2">
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Off"
-            android:id="@+id/offzone1"
-            android:checked="true"/>
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Low"
-            android:layout_marginStart="30dp"
-            android:id="@+id/lowzone1"/>
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mid"
-            android:layout_marginStart="30dp"
-            android:id="@+id/midzone1"/>
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bright"
-            android:layout_marginStart="30dp"
-            android:id="@+id/brightzone1"/>
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="On"
-            android:layout_marginStart="30dp"
-            android:id="@+id/onzone1"/>
-    </RadioGroup>
+<!--    <RadioGroup-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:id="@+id/rg1"-->
+<!--        android:layout_below="@+id/txt2">-->
+<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Off"-->
+<!--            android:id="@+id/offzone1"-->
+<!--            android:checked="true"/>-->
+<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Low"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:id="@+id/lowzone1"/>-->
+<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Mid"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:id="@+id/midzone1"/>-->
+<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Bright"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:id="@+id/brightzone1"/>-->
+<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="On"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:id="@+id/onzone1"/>-->
+<!--    </RadioGroup>-->
 
     <com.google.android.material.slider.Slider
         android:layout_width="wrap_content"
@@ -85,45 +85,45 @@
         android:valueTo="100"
         android:stepSize="1"
         android:id="@+id/lh_slider1"
-        android:visibility="invisible"
+
         />
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/rg2"
-        android:layout_below="@+id/txt3">
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Off"
-            android:id="@+id/offzone2"
-            android:checked="true"/>
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Low"
-            android:layout_marginStart="30dp"
-            android:id="@+id/lowzone2"/>
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mid"
-            android:layout_marginStart="30dp"
-            android:id="@+id/midzone2"/>
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bright"
-            android:layout_marginStart="30dp"
-            android:id="@+id/brightzone2"/>
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="On"
-            android:layout_marginStart="30dp"
-            android:id="@+id/onzone2"/>
-    </RadioGroup>
+<!--    <RadioGroup-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:id="@+id/rg2"-->
+<!--        android:layout_below="@+id/txt3">-->
+<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Off"-->
+<!--            android:id="@+id/offzone2"-->
+<!--            android:checked="true"/>-->
+<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Low"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:id="@+id/lowzone2"/>-->
+<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Mid"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:id="@+id/midzone2"/>-->
+<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Bright"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:id="@+id/brightzone2"/>-->
+<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="On"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:id="@+id/onzone2"/>-->
+<!--    </RadioGroup>-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -146,7 +146,6 @@
         android:valueTo="100"
         android:stepSize="1"
         android:id="@+id/lh_slider2"
-        android:visibility="invisible"
         />
 
     <com.google.android.material.switchmaterial.SwitchMaterial

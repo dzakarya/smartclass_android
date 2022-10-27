@@ -33,10 +33,10 @@ class light_control_page : AppCompatActivity() {
         var zone2 = 0
         var isAutomate = 0
 
-
-        //temporary radio button
-        val rg1 = findViewById<RadioGroup>(R.id.rg1)
-        val rg2 = findViewById<RadioGroup>(R.id.rg2)
+//
+//        //temporary radio button
+//        val rg1 = findViewById<RadioGroup>(R.id.rg1)
+//        val rg2 = findViewById<RadioGroup>(R.id.rg2)
 
         micIV.setOnClickListener {
             val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
@@ -78,38 +78,38 @@ class light_control_page : AppCompatActivity() {
         }
 
         btn_set_value.setOnClickListener {
-            var id1 : Int = rg1.checkedRadioButtonId
-            if (id1!=-1){ // If any radio button checked from radio group
-                // Get the instance of radio button using id
-                val radio1:RadioButton = findViewById(id1)
-                if (radio1.text == "Off"){
-                    zone1 = 0
-                }else if(radio1.text == "Low"){
-                    zone1 = 40
-                }else if(radio1.text == "Mid"){
-                    zone1 = 56
-                }else if(radio1.text == "Bright"){
-                    zone1 = 70
-                }else if(radio1.text == "On"){
-                    zone1 = 100
-                }
-            }
-            var id2 : Int = rg2.checkedRadioButtonId
-            if (id2!=-1){ // If any radio button checked from radio group
-                // Get the instance of radio button using id
-                val radio2:RadioButton = findViewById(id2)
-                if (radio2.text == "Off"){
-                    zone2 = 0
-                }else if(radio2.text == "Low"){
-                    zone2 = 40
-                }else if(radio2.text == "Mid"){
-                    zone2 = 56
-                }else if(radio2.text == "Bright"){
-                    zone2 = 70
-                }else if(radio2.text == "On"){
-                    zone2 = 100
-                }
-            }
+//            var id1 : Int = rg1.checkedRadioButtonId
+//            if (id1!=-1){ // If any radio button checked from radio group
+//                // Get the instance of radio button using id
+//                val radio1:RadioButton = findViewById(id1)
+//                if (radio1.text == "Off"){
+//                    zone1 = 0
+//                }else if(radio1.text == "Low"){
+//                    zone1 = 40
+//                }else if(radio1.text == "Mid"){
+//                    zone1 = 56
+//                }else if(radio1.text == "Bright"){
+//                    zone1 = 70
+//                }else if(radio1.text == "On"){
+//                    zone1 = 100
+//                }
+//            }
+//            var id2 : Int = rg2.checkedRadioButtonId
+//            if (id2!=-1){ // If any radio button checked from radio group
+//                // Get the instance of radio button using id
+//                val radio2:RadioButton = findViewById(id2)
+//                if (radio2.text == "Off"){
+//                    zone2 = 0
+//                }else if(radio2.text == "Low"){
+//                    zone2 = 40
+//                }else if(radio2.text == "Mid"){
+//                    zone2 = 56
+//                }else if(radio2.text == "Bright"){
+//                    zone2 = 70
+//                }else if(radio2.text == "On"){
+//                    zone2 = 100
+//                }
+//            }
 
             var entPointSet = "light/set-light"
             var data = """

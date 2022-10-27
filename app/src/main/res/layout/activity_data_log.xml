@@ -87,6 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/temp_txt"
+                android:textSize="20sp"
                 android:layout_alignTop="@id/temp_txt"
                 android:id="@+id/et_temp"/>
 
@@ -105,6 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/light_txt"
                 android:layout_alignTop="@id/light_txt"
+                android:textSize="20sp"
                 android:id="@+id/et_lh"/>
 
             <TextView
@@ -122,6 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/smoke_txt"
                 android:layout_alignTop="@id/smoke_txt"
+                android:textSize="20sp"
                 android:id="@+id/et_smoke"/>
 
             <TextView
@@ -139,12 +142,31 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/people_txt"
                 android:layout_alignTop="@id/people_txt"
+                android:textSize="20sp"
                 android:id="@+id/et_people"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humidity :"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="20sp"
+                android:id="@+id/humidity_txt"
+                android:layout_below="@+id/people_txt"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/humidity_txt"
+                android:layout_alignTop="@id/humidity_txt"
+                android:textSize="20sp"
+                android:id="@+id/et_humidity"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/people_txt"
+                android:layout_below="@+id/humidity_txt"
                 android:layout_centerHorizontal="true"
                 android:text="@string/search_data"
                 android:textColor="@color/primaryTextColor"

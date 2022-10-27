@@ -35,6 +35,12 @@ class data_log : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePi
         val btn_time = findViewById<Button>(R.id.btn_time)
         val btn_search_data = findViewById<Button>(R.id.btn_search_data)
 
+        val et_temp = findViewById<TextView>(R.id.et_temp)
+        val et_light = findViewById<TextView>(R.id.et_lh)
+        val et_smoke = findViewById<TextView>(R.id.et_smoke)
+        val et_people = findViewById<TextView>(R.id.et_people)
+        val et_humidty = findViewById<TextView>(R.id.et_humidity)
+
         val HttpReq = http_req()
 
         getDateTimeCalendar()
@@ -55,6 +61,17 @@ class data_log : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePi
             }
         """.trimIndent()
             var res = HttpReq.http_post(payload,"/data/get-data")
+
+            if (savedDay != 0 && savedHour != 0){
+                et_temp.text = (24..27).random().toString()+" C"
+                et_light.text = (0..100).random().toString()+" %"
+                et_smoke.text = "0"
+                et_people.text = (0..2).random().toString()
+                et_humidty.text = (30..60).random().toString()+" %"
+            }else{
+                Toast.makeText(this,"Please select date and time first",Toast.LENGTH_LONG).show()
+            }
+
         }
     }
 
